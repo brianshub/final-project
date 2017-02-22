@@ -1,0 +1,293 @@
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+body {
+  	font-size: 18px;
+  	line-height: 1.4;
+  	color: #606161;
+  	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  	font-weight: 300;
+  	/*background-image: url(../images/logo.jpg);
+  	background-repeat: no-repeat;
+    background-size: 560px 560px;
+    background-position: center;
+    background-attachment: fixed;*/
+    width: 100%;
+    background: #f0eae1;
+}
+
+
+#container{
+  margin: 0 5%;
+}
+
+.container {
+  	width: 100%;
+  	margin: 0 auto;
+  	position: relative;
+  }
+
+.logo {
+  	font-size: 1.5em;
+  	font-weight: 800;
+    color: #AE0C0E;
+}
+
+/*.company-logo{
+  margin: 0 auto;
+}*/
+
+header {
+  background: #f0eae1;
+  padding: 25px 0;
+  overflow: hidden;
+  position: fixed;
+  width: 90%;
+  border-bottom: black 1px solid;
+  transition: all 0.4s ease;
+}
+
+header.sticky{
+  padding: 7px 0;
+  font-size: .5em;
+}
+
+header .logo{
+	float: left;
+	padding-left: 10px;
+}
+
+/*header .company{
+  float: left;
+}*/
+
+header nav{
+	float: right;
+	padding-top: 5px;
+	padding-right: 10px;
+}
+
+header nav ul li {
+  	display: inline-block;
+  	margin: 20px 0 0 40px;
+  	font-size: 1em;
+}
+
+header.sticky nav ul li {
+    display: inline-block;
+    margin: 5px 0 0 40px;
+    font-size: 1.4em;
+}
+
+a {
+  	text-decoration: none;
+  	color: #606161;
+}
+
+
+
+.fireplace{
+	 width:100%;
+	 height:490px;
+	 clear: both;
+   padding-top: 30px;
+	 
+}
+
+.line{
+  width: 2em;
+  height: 3px;
+  background: #606161;
+  margin-top: .25em;
+}
+
+header nav ul li:first-child{
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  display: none;
+}
+
+#info{
+  width: 61%;
+  margin-right: 2%;
+  float: left;
+}
+
+#info h1{
+  font-size: 1.5em;
+  background: #AE0C0E;
+  width: 60%;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+#services{
+  width: 35%;
+  margin-left: 2%;
+  float: right;
+}
+
+#services h2{
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px black solid;
+}
+
+em{
+  font-weight: 800;
+  font-style: italic;
+}
+
+#services h3{
+  font-size: 1.5em;
+  color: #AE0C0E;
+  font-weight: 600;
+}
+
+#services ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    border-bottom: 1px black solid;
+  }
+
+.hours{
+  padding-bottom: 10px;
+  border-bottom: 1px black solid;
+}
+
+.cert-container{
+  padding: 10px 0;
+  width: 100%;
+}
+
+.csia-img{
+  float: left;
+}
+
+.certification{
+  width: 75%;
+  color: #AE0C0E;
+  float: right;
+}
+
+strong{
+  font-weight: 600;
+}
+
+#appointment{
+  width: 100%;
+  height: 20px;
+  margin: 0 auto;
+  background: #AE0C0E;
+  clear: both;
+}
+
+footer{
+  width: 100%;
+  height: 20px;
+  margin: 0 auto;
+  background-color: #f0eae1;
+}
+
+/*#wrapper{
+  width: 100%;
+  background: white;
+}*/
+
+
+ 
+
+
+ @media screen and (max-width: 960px){
+ 	
+  body{
+ 		width: 100%;
+    font-size: 16px;
+ 		/*margin: 0 0;*/
+ 	}
+
+ 	header{
+ 		width: 96%;
+ 	}
+
+  #container{
+    margin: 0 2%;
+  }
+
+  header nav ul li:first-child{
+    display: block;
+  } 
+
+  header nav ul li {
+    display: block;
+    margin: 0 0 0 40px;
+  }
+
+  /*header.sticky nav ul li {
+    display: block;
+    margin: 0 0 0 40px;
+  }*/
+
+  header nav {
+    text-align: center;
+    float: none;
+  }
+
+  header .logo {
+    float: none;
+  }
+
+  nav {
+      height: 0em;
+      transition: 1s height;
+      margin-top: 0;
+      overflow: hidden;
+  }
+
+  .open{
+      height: 4.5em;
+  }
+
+}
+
+ @media screen and (max-width:560px){
+
+ 	.fireplace{
+ 		height: 300px;
+ 	}
+
+  #services{
+  width: 96%;
+  margin: 2% 0;
+  float: none;
+  }
+
+  #info{
+  width: 96%;
+  margin: 2% 0;
+  float: none;
+  }
+
+  #info h1{
+    width: 85%;
+  }
+
+  .certification{
+    width: 82%;
+    
+  }
+
+  .certification p{
+    padding-top: 11px;
+  }
+}
