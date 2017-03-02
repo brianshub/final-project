@@ -5,18 +5,13 @@
 }
 
 body {
-  	font-size: 18px;
-  	line-height: 1.4;
-  	color: #606161;
-  	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  	font-weight: 300;
-  	/*background-image: url(../images/logo.jpg);
-  	background-repeat: no-repeat;
-    background-size: 560px 560px;
-    background-position: center;
-    background-attachment: fixed;*/
-    width: 100%;
-    background: #f0eae1;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #606161;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  width: 100%;
+  background: #f0eae1;
 }
 
 
@@ -25,24 +20,29 @@ body {
 }
 
 .container {
-  	width: 100%;
-  	margin: 0 auto;
-  	position: relative;
-  }
-
-.logo {
-  	font-size: 1.5em;
-  	font-weight: 800;
-    color: #AE0C0E;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 
-/*.company-logo{
-  margin: 0 auto;
-}*/
+.logo-img{
+  float: left;
+}
+
+.name{
+  float: right;
+  padding: 25px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #AE0C0E;
+}
 
 header {
   background: #f0eae1;
-  padding: 25px 0;
+  padding: 5px 0 5px 0;
   overflow: hidden;
   position: fixed;
   width: 90%;
@@ -56,45 +56,65 @@ header.sticky{
 }
 
 header .logo{
-	float: left;
-	padding-left: 10px;
+  float: left;
+  padding-left: 10px;
 }
 
-/*header .company{
-  float: left;
-}*/
+header.sticky img{
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+}
 
 header nav{
-	float: right;
-	padding-top: 5px;
-	padding-right: 10px;
+  float: right;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+header ul{
+  padding: 40px 0 0 0;
 }
 
 header nav ul li {
-  	display: inline-block;
-  	margin: 20px 0 0 40px;
-  	font-size: 1em;
+  display: inline-block;
+  margin: 20px 0 0 40px;
+  font-size: 1em;
 }
 
+
 header.sticky nav ul li {
-    display: inline-block;
-    margin: 5px 0 0 40px;
-    font-size: 1.4em;
+  display: inline-block;
+  margin: 5px 0 0 40px;
+  font-size: 1.4em;
 }
 
 a {
-  	text-decoration: none;
-  	color: #606161;
+  text-decoration: none;
+  color: #606161;
+}
+
+#fire2{
+  clear: both;
+  padding-top: 30px;
+  width: 100%;
+  height: 490px;
 }
 
 
+section.parralax{
+  background-image: url("../images/fireplace.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 490px;
+}
 
-.fireplace{
-	 width:100%;
-	 height:490px;
-	 clear: both;
-   padding-top: 30px;
-	 
+section.parralax h1{
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: 400px;
+  font-weight: 600;
+  text-shadow: 0 0 10px white;
+  color: #AE0C0E;
 }
 
 .line{
@@ -155,9 +175,9 @@ em{
 }
 
 #services ul {
-    list-style-type: disc;
-    list-style-position: inside;
-    border-bottom: 1px black solid;
+  list-style-type: disc;
+  list-style-position: inside;
+  border-bottom: 1px black solid;
   }
 
 .hours{
@@ -184,12 +204,17 @@ strong{
   font-weight: 600;
 }
 
-#appointment{
+#facebook{
   width: 100%;
-  height: 20px;
+  height: 60px;
   margin: 0 auto;
   background: #AE0C0E;
   clear: both;
+  text-align: center;
+}
+
+#facebook img{
+  padding-top: 10px;
 }
 
 footer{
@@ -197,28 +222,46 @@ footer{
   height: 20px;
   margin: 0 auto;
   background-color: #f0eae1;
+  font-size: .7em
+
 }
 
-/*#wrapper{
-  width: 100%;
-  background: white;
-}*/
+.required{
+  color: #AE0C0E;
+}
 
+#fullname, #email, #street, #suite, #city, #state, #zip, #phone, #date{
+  margin-bottom: 15px;
+  width: 50%;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+fieldset{
+  border: 1px solid black;
+  padding: 5px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+#submit{
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  padding-top: 5px;
+  float: right;
+}
 
  
 
 
- @media screen and (max-width: 960px){
- 	
+@media screen and (max-width: 960px){
+  
   body{
- 		width: 100%;
+    width: 100%;
     font-size: 16px;
- 		/*margin: 0 0;*/
- 	}
+  }
 
- 	header{
- 		width: 96%;
- 	}
+  header{
+    width: 96%;
+  }
 
   #container{
     margin: 0 2%;
@@ -233,49 +276,75 @@ footer{
     margin: 0 0 0 40px;
   }
 
-  /*header.sticky nav ul li {
-    display: block;
-    margin: 0 0 0 40px;
-  }*/
+  header nav ul{
+    padding: 0;
+  }
 
   header nav {
     text-align: center;
     float: none;
   }
 
-  header .logo {
+  header .logo, header .logo-img, header .name {
     float: none;
+    display: inline-block;
+    vertical-align: middle; /*is this fixed?*/
   }
 
+  .name{
+    height: 149px;
+    padding: 17px 0 0 25px;
+  }
+
+  header.sticky .name{
+    height: 84px;
+    padding: 23px 0 0 25px;
+  }
+
+  header .logo-img img{
+    width: 110px;
+    height: 132px;
+  }
+
+  header.sticky img{
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+  }  
+
   nav {
-      height: 0em;
-      transition: 1s height;
-      margin-top: 0;
-      overflow: hidden;
+    height: 0em;
+    transition: 1s height;
+    margin-top: 0;
+    overflow: hidden;
   }
 
   .open{
-      height: 4.5em;
+    height: 4.5em;
   }
 
 }
 
- @media screen and (max-width:560px){
+@media screen and (max-width:560px){
 
- 	.fireplace{
- 		height: 300px;
- 	}
+  body{
+    font-size: 12px;
+  }
+
+  .fireplace{
+    height: 300px;
+  }
 
   #services{
-  width: 96%;
-  margin: 2% 0;
-  float: none;
+    width: 96%;
+    margin: 2% 0;
+    float: none;
   }
 
   #info{
-  width: 96%;
-  margin: 2% 0;
-  float: none;
+    width: 96%;
+    margin: 2% 0;
+    float: none;
   }
 
   #info h1{
@@ -290,4 +359,41 @@ footer{
   .certification p{
     padding-top: 11px;
   }
-}
+
+  header .logo-img img{
+    width: 70px;
+    height: 80px;
+    margin-top: 20px;
+  }
+
+  header.sticky img{
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+  }
+
+  header .name{
+    height: 84px;
+    padding: 10px 0 0 25px;
+  }
+
+  header.sticky .name{
+    height: 84px;
+    padding: 30px 0 0 25px;
+  }
+
+  #fire2{
+    height: 310px;
+  }
+
+  section.parralax{
+    background-size: 100% 310px;
+  }
+
+  section.parralax h1{
+    margin-top: 230px;
+  }
+
+  fieldset{
+    width: 97%;
+  }

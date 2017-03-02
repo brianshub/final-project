@@ -15,6 +15,20 @@ $(document).ready(function(){
   		}
 	});
 
+	var parallax = $(".parallax");
+  	speed = 0.5;
+  	$(window).scroll(function(){
+    
+    var windowYOffset = $(window).scrollTop();
+    console.log("window scrolling...", windowYOffset);
+    elBackgroundPos = "50% " + (windowYOffset * speed) + "px";
+    $("#fire2").css("background-position", elBackgroundPos);
+    console.log("Huh???");
+  });
+  	
+  	$("#submit").click(function(){
+  		event.preventDefault();
+  	});
 
 
 });
